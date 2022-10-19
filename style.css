@@ -1,0 +1,193 @@
+
+
+@font-face {
+    font-family: Ethnocentric;
+    src: url(./ethnocentric/ethnocentric\ rg.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+
+.navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Couleur + Font du logo ARICI */
+.navbar > .logo {
+    color: black;
+    font-family: Ethnocentric;
+    margin: -11px;
+}
+
+
+/* Enleve les points listing */
+.navbar ul {
+    list-style-type: none;
+    font-size: 1.25rem;
+}
+
+
+/* Style des menus sans compter le logo */
+.navbar .nav-links ul{
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+
+/* Espace entre les menus */
+.navbar .nav-links ul li{
+    margin: 0 30px;
+}
+
+.navbar .nav-links ul li:hover{
+color: white;
+transition: 0.3s ease;
+}
+
+.navbar .menu-lateral{
+    display: none;
+    position: absolute;
+    right: 140px;
+    width: 35px;
+    top: 25px;
+}
+
+
+
+/* Réglage sur portable */
+@media screen and (max-width: 900px){
+    .navbar .logo{
+        position: absolute;
+        top: 25px;
+        left: 50px;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .navbar .menu-lateral{
+        display: block;
+        right: 30px;
+    }
+
+    .nav-links {
+        position: absolute;
+        display: flex;
+        background-color: rgba(15, 11, 11, 0.404);
+        backdrop-filter: blur(4px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}
+
+footer{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 25%;
+}
+
+.footer ul {
+    display: flex;
+    transform: translate(-50%, -50%);
+  }
+  
+  .footer ul li {
+    list-style: none;
+  }
+  
+  .footer ul li a {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+  }
+  
+  .footer ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+  .footer ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  .footer ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+  .footer ul li a:hover:before {
+    top: 0;
+  }
+  
+  .footer ul li:nth-child(1) a:before{
+    background: #e95950;
+  }
+  
+  .footer ul li:nth-child(2) a:before{
+    background: #55acee;
+  }
+  
+  .footer ul li:nth-child(3) a:before {
+    background: #0077b5;
+  }
