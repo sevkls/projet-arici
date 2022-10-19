@@ -35,7 +35,7 @@ body {
 
 /* Couleur + Font du logo ARICI */
 .navbar > .logo {
-    color: black;
+    color: #fff;
     font-family: Ethnocentric;
     margin: -11px;
 }
@@ -53,6 +53,7 @@ body {
     display: flex;
     font-family: 'Kanit', sans-serif;
     font-weight: bold;
+    color: #fff;
 }
 
 /* Espace entre les menus */
@@ -60,9 +61,14 @@ body {
     margin: 0 30px;
 }
 
-.navbar .nav-links ul li:hover{
-color: white;
+.navbar .nav-links ul li :hover{
+color: rgba(227, 230, 214, 0.253);
 transition: 0.3s ease;
+}
+
+.logo:hover{
+    color: black;
+    transition: 0.3s ease;
 }
 
 .navbar .menu-lateral{
@@ -71,6 +77,8 @@ transition: 0.3s ease;
     right: 140px;
     width: 35px;
     top: 25px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 

@@ -12,17 +12,43 @@
 </head>
 <body>
 
-    <footer>
-     <div class="footer">
+
+<nav class="navbar">
+    <a href="index.html" class="logo"> Arici </a>
+    <div class="nav-links">
         <ul>
-            <li>
-              <a href="https://www.instagram.com/boulangerie_arici/">
-                <i class="fab fa-instagram icon"></i>    </a>
-            </li>
+            <li class="active"> <a href="#">Nos Horaires</a></li>
+            <li> <a href="#">Nos Menus</a></li>
+            <li> <a href="#">+ D'informations</a></li>
+            <li> <a href="contact.html">Nous contacter</a></li>
         </ul>
-          
-        </div>
-    </footer>
-    
+    </div>
+    <img src="./images/plus.png" alt="menu lateral" class="menu-lateral">
+</nav>
+
+
+
+<footer>
+    <div class="footer">
+       <ul>
+           <li>
+             <a href="https://www.instagram.com/boulangerie_arici/">
+               <i class="fab fa-instagram icon"></i>    </a>
+           </li>
+       </ul>
+         
+       </div>
+   </footer>
+   
+
+<script>
+    const menuLateral = document.querySelector(".menu-lateral")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuLateral.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
 </body>
 </html>
+
