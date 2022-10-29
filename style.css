@@ -1,297 +1,141 @@
-
-
-@font-face {
-    font-family: Ethnocentric;
-    src: url(./ethnocentric/ethnocentric\ rg.otf);
+:root {
+    --navbar-item-hovered-color: white;
+    --primary-color: rgb(235, 138, 103);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: inherit;
-}
 
+html,
 body {
+    margin: 0;
+    font-family: 'Montagu Slab', serif;
+    font-size: 16px;
 }
 
-.logo {
-    font-size: 2rem;
+main {
+    padding: 5rem 4rem;
+    margin-left: 5rem;
+    text-align: justify;
 }
-
 
 .navbar {
-    background: #222222;
-    border-bottom: solid 1px rgb(199, 109, 109);
-    position: relative;
-    padding: 16.75px 0px 15px 0px;
+    width: 5rem;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #f2f2f2;
+    box-shadow: rgba(12, 43, 30, 0.2) 0 4px 15px;
+}
+
+.navbar:hover {
+    width: 15rem;
+    transition: 0.2s ease;
+}
+
+.navbar:not(:hover) {
+    transition: 0.2s ease;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-}
-
-
-
-/* Couleur + Font du logo ARICI */
-.navbar > .logo {
-    color: rgb(223, 139, 22);
-    font-family: Ethnocentric;
-    margin: -6px;
-}
-
-
-/* Enleve les points listing */
-.navbar ul {
-    list-style-type: none;
-    font-size: 1.25rem;
-    display: inline-block;
-}
-
-
-/* Style des menus sans compter le logo */
-.navbar .nav-links ul{
-    display: flex;
-    font-family: 'Kanit', sans-serif;
-    font-weight: bold;
-    color: rgb(223, 139, 22);
-}
-
-.navbar .nav-links ul li:after{
-    content: '';
-    width: 0px;
-    height: 2px;
-    display: block;
-    background:rgb(255, 255, 255);
-    transition: 300ms;
-}
-
-.navbar .nav-links ul li:hover:after{
-    width: 100%;
-}
-
-/* Espace entre les menus */
-.navbar .nav-links ul li{
-    font-size: 90%;
-    margin: 0 30px;
-}
-
-/* Couleur quand on passe la souris dessus*/
-.navbar .nav-links ul li:hover{
-color: white;
-transition: 0.3s ease;
-}
-
-.logo:hover{
-    color: white;
-    transition: 0.3s ease;
-}
-
-.navbar .menu-lateral{
-    display: none;
-    position: absolute;
-    right: 140px;
-    width: 35px;
-    top: 25px;
-    filter: invert();
-}
-
-/* IMAGE BACKGROUND */
-.container{
-    background-image: url(./images/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}
-/* Votre boulangerie préférée c'est nous */
-.container h1{    
-    position: relative;
-    font-family: 'Aclonica', sans-serif;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    height: 100%;
+}
+
+.navbar-item {
+    width: 100%;
+    border-bottom: solid 1px #ececec;
+    transition: background-color var(--navbar-item-hovered-color);
+}
+
+.navbar-item:hover {
+    background-color: rgb(218, 213, 213);
+}
+
+.navbar-item:last-child {
+    margin-top: auto;
+}
+
+.navbar-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 5rem;
+    width: 100%;
+    text-decoration: none;
+}
+
+.navbar-icon {
     text-align: center;
-    font-size: 3.5rem;
-    padding: 18.1% 0% 24%;
-    color: rgb(218, 195, 146);
+    font-size: 1.5rem;
+    margin: 0 1.5rem;
+    color: #646c79;
+}
+
+.navbar-item:hover .navbar-icon {
+    color: var(--primary-color);
+}
+
+.navbar-title {
+    color: black;
 }
 
 
-.texte {
-    position: absolute;
-    margin: -23% 45%;
-    font-family: 'Kanit', sans-serif;
-    background-color: white;
-    font-size: 1.2rem;
-    color: rgb(218, 195, 146);
-    border: 1px solid rgb(194, 192, 186);
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer;
-    padding: .2em .5em;
-    transition: .3s;
+.navbar:not(:hover) .navbar-title {
+    display: none;
 }
 
-.texte:hover{
-    box-shadow: 8px 0px 0px 1px rgb(194, 192, 186);
-    animation: anim-shadow 0.2s forwards;
+.logo .navbar-title {
+    font-family: 'Ethnocentric', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1.5rem;
 }
 
-.menu-container p{
-    position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 3.5rem;
-        padding: 18.1% 0% 24%;
-        color: rgb(0, 0, 0);
-    }
-
-    .menu-container .menu-pdf{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: -20%;
-        font-size: 1.5rem;
-        color: rgb(218, 195, 146);
-    }
-
-    .menu-container .menu-pdf:hover{
-        color: rgb(0, 0, 0);
-        transition: 0.3s ease;
-    }
-
-@keyframes anim-shadow{
-    100% {
-        box-shadow: 0px 0px 10px 10px;
-    }
+.navbar:hover .logo .navbar-icon {
+    transform: rotate(90deg);
+    transition: 0.2s;
 }
 
-/* Réglage sur portable */
-@media screen and (max-width: 900px){
-    body{
-        background-color: rgb(78, 51, 12);
-    }
-    .navbar .logo{
-        color: black;
-        position: absolute;
-        top: 25px;
-        left: 50px;
-    }
-    .navbar{
-        border-bottom: none;
-        padding: 0;
-    }
-    .navbar .menu-lateral{
-        display: block;
-        right: 30px;
-    }
-
-    .nav-links {
-        position: absolute;
-        display: flex;
-        background-color: rgba(15, 11, 11, 0.404);
-        backdrop-filter: blur(4px);
-        top: 0;
-        left: 0;
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        top:auto;
         width: 100%;
-        height: 100vh;
-        align-items: center;
-        justify-content: center;
-        margin-left: -100%;
-        transition: all 0.5s ease;
+        bottom: 0px;
+    }
+    .navbar:hover{
+        width: 100%;
+    } 
+
+    .navbar-menu{
+        display: flex;
+        flex-direction: row;
     }
     
-    .nav-links.mobile-menu{
+    .logo{
+        display: none;
+    }
+
+    main{
         margin-left: 0;
+        margin-bottom: 5rem;
     }
 
-    .nav-links ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .navbar:hover .navbar-title {
+        display: none;
     }
 
-    .navbar .nav-links ul li{
-        margin: 25px 0;
-        font-size: 1em;
+
+    .navbar-icon{
+        min-width: auto;
+        margin: 0;
+    }
+
+    .navbar-link{
+        justify-content: center;
     }
 }
-
-
-/* BAS DE PAGE */
-
-footer{
-    position: absolute;
-    margin-left: 50%;
-    margin-top: 25%;
-}
-
-.footer ul {
-    display: flex;
-    transform: translate(-50%, -50%);
-  }
-  
-  .footer ul li {
-    list-style: none;
-  }
-  
-  .footer ul li a {
-    width: 100px;
-    height: 100px;
-    background-color: #fff;
-    text-align: center;
-    line-height: 100px;
-    font-size: 35px;
-    margin: 0 10px;
-    display: block;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    border: 3px solid #fff;
-    z-index: 1;
-  }
-  
-  .footer ul li a .icon {
-    position: relative;
-    color: #262626;
-    transition: .5s;
-    z-index: 3;
-  }
-  
-  .footer ul li a:hover .icon {
-    color: #fff;
-    transform: rotateY(360deg);
-  }
-  
-  .footer ul li a:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #f00;
-    transition: .5s;
-    z-index: 2;
-  }
-  
-  .footer ul li a:hover:before {
-    top: 0;
-  }
-  
-  .footer ul li:nth-child(1) a:before{
-    background: #e95950;
-  }
-  
-  .footer ul li:nth-child(2) a:before{
-    background: #55acee;
-  }
-  
-  .footer ul li:nth-child(3) a:before {
-    background: #0077b5;
-  }

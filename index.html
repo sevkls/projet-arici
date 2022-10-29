@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Silkscreen:wght@400;700&display=swap');</style>
+    <title>Arici</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./images/logo-arici.png" sizes="16x16" >
+    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/logo-arici.png" sizes="16x16">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arici</title>
 </head>
+
 <body>
-<div class="navbar">
-    <a href="index.html" class="logo"> Arici </a>
-    <div class="nav-links">
-        <ul>
-            <li class="active"> <a href="menu.html">Menu</a></li>
-            <li> <a href="#">Horaires</a></li>
-            <li> <a href="#">+ D'informations</a></li>
-            <li> <a href="contact.html">Nous contacter</a></li>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li class="navbar-item logo">
+                <a href="#" class="navbar-link">
+                    <span class="navbar-title"> ARICI </span>
+                    <i class="fa fa-chevron-down navbar-icon"></i>
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-link">
+                    <i class="fa fa-home navbar-icon"></i>
+                <span class="navbar-title">Accueil</span>
+            </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-link">
+                    <i class="fa fa-calendar navbar-icon"></i>
+                <span class="navbar-title">Horaires</span>
+            </a>
+            </li>
+            <li class="navbar-item">
+                <a href="#" class="navbar-link">
+                <i class="fas fa-phone navbar-icon"></i>
+                <span class="navbar-title">Qui nous sommes</span>
+            </a>
+            </li>
         </ul>
-    </div>
-    <img src="./images/plus.png" alt="menu lateral" class="menu-lateral">
-    </div>
-
-    <div class="container">
-       <h1> Bienvenue à la <br> Boulangerie Arici
-       </h1>
-       <button class="texte" type="button">En savoir plus</button>
-    </div>
-
-
-<script>
-    const menuLateral = document.querySelector(".menu-lateral")
-    const navLinks = document.querySelector(".nav-links")
-
-    menuLateral.addEventListener('click',()=>{
-    navLinks.classList.toggle('mobile-menu')
-    })
-</script>
+    </nav>
+    <main>
+        <h4>Ce site a été propulsé par Sevda KELES.</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis repudiandae commodi necessitatibus nostrum
+            ullam obcaecati reprehenderit exercitationem nobis. Fugiat iure soluta autem in? Consequatur minus, animi
+            vero blanditiis sed hic!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis repudiandae commodi necessitatibus nostrum
+            ullam obcaecati reprehenderit exercitationem nobis. Fugiat iure soluta autem in? Consequatur minus, animi
+            vero blanditiis sed hic!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis repudiandae commodi necessitatibus nostrum
+            ullam obcaecati reprehenderit exercitationem nobis. Fugiat iure soluta autem in? Consequatur minus, animi
+            vero blanditiis sed hic!</p>
+    </main>
 
 </body>
 
